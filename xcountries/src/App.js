@@ -12,11 +12,18 @@ function App() {
   useEffect(()=>{
     let jsData;
     const fetchCountry = async () => {
-      const url = 'https://xcountries-backend.azurewebsites.net/all';
-      const res = await fetch('https://xcountries-backend.azurewebsites.net/all');
-      jsData = await res.json();
-      // console.log(jsData);
-      setCountryList(jsData);
+      try{
+
+        const url = 'https://xcountries-backend.azurewebsites.net/all';
+        const res = await fetch('https://xcountries-backend.azurewebsites.net/all');
+        jsData = await res.json();
+        // console.log(jsData);
+        setCountryList(jsData);
+      }
+      catch(e)
+      {
+        console.error("Error fetching data: ", e);
+      }
     }
 
     fetchCountry();
@@ -38,6 +45,7 @@ function App() {
 
   //   }
   // }
+  //deciding factor of the code is the input that the user is givig ot the user this can vary onbased on different types of user and code will work accordignly
 
   
 
