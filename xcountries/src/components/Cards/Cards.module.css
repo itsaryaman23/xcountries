@@ -1,0 +1,24 @@
+.card{
+    width: 150px;
+    height: 120px;
+    border: 1px lightgray solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 10px;
+    margin: 0.5%;
+}
+
+.flag{
+    /* overflow: hidden; */
+    height: 100px;
+    width: 100px;
+}
+
+.imgCont{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
